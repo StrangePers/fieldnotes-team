@@ -1,0 +1,2 @@
+# Keep the exact bytes of the local skill distributions recorded in sources.json.
+skills/** -text

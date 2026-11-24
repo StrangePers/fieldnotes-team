@@ -1,0 +1,219 @@
+[
+  {
+    "skill": "brainstorming",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "6ee10d1481b8a2580d5336ff66c5c08acc9d4b251b13bbc3bfd31be99c261d43",
+    "tree_sha256": "17032ec33d782bc2d4fa998e8e84fad7dbf898861f7b4570e8f504308712551e"
+  },
+  {
+    "skill": "diagnosing-superpowers",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "5a652f8132cc901eb5ca61f89157839f87a2f20aed037fc7a2b51051bc37cd19",
+    "tree_sha256": "4d2dea9197ce16cced53045d6d4ee59866c596932b565860caa018aa9e518940"
+  },
+  {
+    "skill": "dispatching-parallel-agents",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+    "tree_sha256": "8611bcbc9ebf8270100182839175c0250c0cfa4231559078fcaa7b44fa704d08"
+  },
+  {
+    "skill": "executing-plans",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71",
+    "tree_sha256": "7ca10a17339372e71889919265f02ae7db4d5edff2c3a2c769f34649b27e7d3e"
+  },
+  {
+    "skill": "finishing-a-development-branch",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+    "tree_sha256": "3cb77392de8ca5d4d52f6ccc2e69637f4189f23f258535a035b378c45d111a31"
+  },
+  {
+    "skill": "receiving-code-review",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+    "tree_sha256": "8a8165d7e791fea84db1f39f1a48a28bc6df5423b1f68c60b1015210dcfc7610"
+  },
+  {
+    "skill": "requesting-code-review",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+    "tree_sha256": "c858b6758487602d66075b6a692fdfd6e740ae83951227ab45d6c6e369ce5d3c"
+  },
+  {
+    "skill": "subagent-driven-development",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "8dde5589ee083fb4999106d116f01c8fdaf3116a8a9813fdedeb80329de49046",
+    "tree_sha256": "4b879964cca24275fe4df4d86e0ba81e7e90793d652e26d38b449de9fe32f50f"
+  },
+  {
+    "skill": "systematic-debugging",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+    "tree_sha256": "797cce63b8e93e826724913172acb97c59df4cc420dba8ce4d7a490e85d41a81"
+  },
+  {
+    "skill": "test-driven-development",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+    "tree_sha256": "c23cf09412178a22d131cc0d914b4fc4664c5bac188af76f8fb1fe99b87ebf85"
+  },
+  {
+    "skill": "using-git-worktrees",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+    "tree_sha256": "58ddb4ec9c178fd1d3cd4838ade9eec996b727a480cf5d419aa61fa13d8266d8"
+  },
+  {
+    "skill": "using-superpowers",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
+    "tree_sha256": "4be2c5108fd481acdf680d546c9b1e3c8971e5f46556ef6ba8498e3b1f9affdd"
+  },
+  {
+    "skill": "verification-before-completion",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+    "tree_sha256": "5839bbf9770a433ccb01054819042cbaadc568be2ce3f6fada3db0eff3d856f8"
+  },
+  {
+    "skill": "writing-plans",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+    "tree_sha256": "3cd5d4905fc4310221c66b9b9da9592b643bb51198919988f524ba8e1431acde"
+  },
+  {
+    "skill": "writing-skills",
+    "source": "obra/superpowers 7.0.0 (local distribution)",
+    "group": "superpowers",
+    "entry_sha256": "93e2c54d3ed8503f3f20e83327697232747e2d9d53d4abf8e5ea7930d1e6205f",
+    "modification": "Replaced imported workstation paths in two files with a portable skills directory",
+    "tree_sha256": "ad360b6107d91fbf97bc425d8637d75feff8fa76ba4573e3e3e6a2b34cc9e52b"
+  },
+  {
+    "skill": "issue-readiness-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/issue-readiness-check"
+  },
+  {
+    "skill": "change-evidence-review",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/change-evidence-review"
+  },
+  {
+    "skill": "component-boundary-trace",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/component-boundary-trace"
+  },
+  {
+    "skill": "regression-test-sensitivity",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/regression-test-sensitivity"
+  },
+  {
+    "skill": "quickstart-example-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/quickstart-example-check"
+  },
+  {
+    "skill": "isolated-ui-smoke-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/isolated-ui-smoke-check"
+  },
+  {
+    "skill": "keyboard-focus-path-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/keyboard-focus-path-check"
+  },
+  {
+    "skill": "responsive-container-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/responsive-container-check"
+  },
+  {
+    "skill": "skill-selection-evaluation",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/skill-selection-evaluation"
+  },
+  {
+    "skill": "skill-visibility-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/skill-visibility-check"
+  },
+  {
+    "skill": "consumer-api-compatibility",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/consumer-api-compatibility"
+  },
+  {
+    "skill": "package-contents-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/package-contents-check"
+  },
+  {
+    "skill": "frontend-design",
+    "source": "Anthropic frontend-design (local distribution)",
+    "group": "tooling",
+    "entry_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+    "tree_sha256": "d43ace63d22e3502ab5c53b63138dafd0431ed5fd2fa63320285c8167ab27de6"
+  },
+  {
+    "skill": "skill-creator",
+    "source": "Anthropic skill-creator (local distribution)",
+    "group": "tooling",
+    "entry_sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+    "tree_sha256": "c72bdb540a3d119e2b27eae5f45d991e91434627857267bb8e7e63baf4792d41"
+  },
+  {
+    "skill": "playwright",
+    "source": "Knowledge sources/global/skills/playwright; see NOTICE.txt",
+    "group": "tooling",
+    "entry_sha256": "76331cc43f2085a548e49b682504e4f11b40fe72b20593c22db59e7a0e947e84",
+    "modification": "Project-relative wrapper discovery and explicit Bash invocation",
+    "tree_sha256": "02d121273a0b4e6a477b0ab7e9dc0e8e7b908baafc1166da62ec892ace4c4c11"
+  },
+  {
+    "skill": "task-brief-and-handoff",
+    "source": "Team adaptation of local task briefs and issue-readiness-check",
+    "group": "team",
+    "entry_sha256": "5f86f10bd23a92db3d7797fe63b0d83238e3d03197a79761724cdfb911a1f08d",
+    "tree_sha256": "57ee54c654159648388dea7e56b848daa2e6f6deca23387a1b49a1785b6c393f"
+  },
+  {
+    "skill": "binary-debug-evidence",
+    "source": "Team adaptation of android-debugging and release artifact verification",
+    "group": "team",
+    "entry_sha256": "96234d263be2d98d26296b2005c629a0072dbc07bc8bcc08254477358e292148",
+    "tree_sha256": "c7c2be7143cc495aaa3e38cdeb0d3faae6399c3adcb4b9b3a3c1788a24af6a4c"
+  },
+  {
+    "skill": "qt-headless-ui-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/qt-headless-ui-check"
+  },
+  {
+    "skill": "cpp-dll-abi-check",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/cpp-dll-abi-check"
+  },
+  {
+    "skill": "native-decompiler-crosscheck",
+    "group": "fieldnotes",
+    "source": "packs/fieldnotes-skills/skills/native-decompiler-crosscheck"
+  }
+]

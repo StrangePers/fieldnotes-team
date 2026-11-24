@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "skill_roots": [
+    "packs/fieldnotes-skills/skills"
+  ],
+  "mcp": {},
+  "projects": {
+    "general": {
+      "skills": [
+        "brainstorming",
+        "writing-plans",
+        "executing-plans",
+        "systematic-debugging",
+        "test-driven-development",
+        "requesting-code-review",
+        "receiving-code-review",
+        "verification-before-completion",
+        "issue-readiness-check",
+        "change-evidence-review",
+        "task-brief-and-handoff",
+        "diagnosing-superpowers",
+        "dispatching-parallel-agents",
+        "finishing-a-development-branch",
+        "subagent-driven-development",
+        "using-git-worktrees",
+        "using-superpowers",
+        "writing-skills"
+      ],
+      "mcp": [],
+      "notes": "projects/general"
+    },
+    "web": {
+      "skills": [
+        "brainstorming",
+        "writing-plans",
+        "executing-plans",
+        "systematic-debugging",
+        "test-driven-development",
+        "requesting-code-review",
+        "receiving-code-review",
+        "verification-before-completion",
+        "issue-readiness-check",
+        "change-evidence-review",
+        "task-brief-and-handoff",
+        "frontend-design",
+        "playwright",
+        "isolated-ui-smoke-check",
+        "responsive-container-check",
+        "keyboard-focus-path-check",
+        "diagnosing-superpowers",
+        "dispatching-parallel-agents",
+        "finishing-a-development-branch",
+        "subagent-driven-development",
+        "using-git-worktrees",
+        "using-superpowers",
+        "writing-skills"
+      ],
+      "mcp": [],
+      "notes": "projects/web"
+    },
+    "native": {
+      "skills": [
+        "brainstorming",
+        "writing-plans",
+        "executing-plans",
+        "systematic-debugging",
+        "test-driven-development",
+        "requesting-code-review",
+        "receiving-code-review",
+        "verification-before-completion",
+        "issue-readiness-check",
+        "change-evidence-review",
+        "task-brief-and-handoff",
+        "binary-debug-evidence",
+        "component-boundary-trace",
+        "consumer-api-compatibility",
+        "regression-test-sensitivity",
+        "diagnosing-superpowers",
+        "dispatching-parallel-agents",
+        "finishing-a-development-branch",
+        "subagent-driven-development",
+        "using-git-worktrees",
+        "using-superpowers",
+        "writing-skills",
+        "package-contents-check",
+        "qt-headless-ui-check",
+        "cpp-dll-abi-check",
+        "native-decompiler-crosscheck"
+      ],
+      "mcp": [],
+      "notes": "projects/native"
+    },
+    "skill-author": {
+      "skills": [
+        "brainstorming",
+        "writing-plans",
+        "executing-plans",
+        "systematic-debugging",
+        "test-driven-development",
+        "requesting-code-review",
+        "receiving-code-review",
+        "verification-before-completion",
+        "issue-readiness-check",
+        "change-evidence-review",
+        "task-brief-and-handoff",
+        "writing-skills",
+        "skill-creator",
+        "skill-selection-evaluation",
+        "skill-visibility-check",
+        "quickstart-example-check",
+        "diagnosing-superpowers",
+        "dispatching-parallel-agents",
+        "finishing-a-development-branch",
+        "subagent-driven-development",
+        "using-git-worktrees",
+        "using-superpowers"
+      ],
+      "mcp": [],
+      "notes": "projects/skill-author"
+    }
+  }
+}

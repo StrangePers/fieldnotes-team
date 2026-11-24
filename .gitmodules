@@ -1,0 +1,3 @@
+[submodule "packs/fieldnotes-skills"]
+	path = packs/fieldnotes-skills
+	url = https://github.com/StrangePers/fieldnotes-skills.git
