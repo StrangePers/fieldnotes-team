@@ -1,6 +1,6 @@
 # Fieldnotes для команды
 
-Этот приватный workspace задаёт, какие скиллы получит каждый проект. Из 35 выбранных скиллов 15 загружаются из публичной библиотеки как Git-подмодуль, ещё 20 находятся в `skills/`. Версию библиотеки фиксирует коммит этого репозитория. [Публичная библиотека Fieldnotes Skills](https://github.com/StrangePers/fieldnotes-skills)
+Публичный набор профилей для разработки с Codex и Claude Code. Выберите профиль для своего проекта. Из 35 скиллов 15 подключены из библиотеки как Git-подмодуль, ещё 20 находятся в `skills/`. Версию библиотеки фиксирует коммит этого репозитория. [Публичная библиотека Fieldnotes Skills](https://github.com/StrangePers/fieldnotes-skills)
 
 | Профиль | Карточек | Для каких задач |
 | --- | ---: | --- |
@@ -11,7 +11,7 @@
 
 ## Первая установка
 
-Понадобятся Git, Python 3.11+ и доступ на чтение к этому репозиторию. Из общего родительского каталога клонируйте инструмент и командный workspace. Пример предполагает, что рядом уже лежит Git-проект `my-project`. Замените путь и выберите профиль из таблицы.
+Для установки нужны Git и Python 3.11+. Любой участник может скачать инструмент и набор профилей по HTTPS без приглашения или входа в GitHub. Выполните команды из каталога, где находится ваш Git-проект. Замените `my-project` на его путь и выберите профиль из таблицы.
 
 ```sh
 git clone https://github.com/StrangePers/project-fieldnotes.git
@@ -61,3 +61,9 @@ git diff --cached --submodule=log
 Источники 35 карточек перечислены в [sources.json](sources.json). Для локальных дистрибутивов сохранены контрольные суммы и файлы лицензий. Публичные карточки распространяются как Fieldnotes Skills by StrangePers под [CC BY 4.0](https://github.com/StrangePers/fieldnotes-skills/blob/main/LICENSE).
 
 Карточки Superpowers взяты из версии 7.0.0. Для хуков и вызовов с пространством имён используйте [плагин Superpowers](https://github.com/obra/superpowers). Для Playwright CLI нужны Node.js, npm и Bash. Некоторые средства оценки skill-creator используют Claude CLI. Подключения MCP и ключи доступа участники настраивают у себя.
+
+## Лицензии
+
+StrangePers распространяет четыре профиля (`workspace.json` и материалы в `projects/`) и скиллы `task-brief-and-handoff` и `binary-debug-evidence` под CC BY 4.0. При распространении укажите автора и источник, дайте ссылку на лицензию и отметьте внесённые изменения. Подходящая подпись — «Fieldnotes Team Profiles by StrangePers». [Область действия и текст лицензии](LICENSE)
+
+Для Superpowers действует MIT. У `frontend-design`, `skill-creator` и `playwright` свои файлы Apache 2.0 и сопроводительные уведомления. Для подмодуля Fieldnotes Skills действуют условия его репозитория. [Источники компонентов](sources.json)

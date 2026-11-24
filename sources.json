@@ -192,14 +192,14 @@
     "source": "Team adaptation of local task briefs and issue-readiness-check",
     "group": "team",
     "entry_sha256": "5f86f10bd23a92db3d7797fe63b0d83238e3d03197a79761724cdfb911a1f08d",
-    "tree_sha256": "57ee54c654159648388dea7e56b848daa2e6f6deca23387a1b49a1785b6c393f"
+    "tree_sha256": "131abeddb81c887f30088be9f6b556c6228006042ac9c59ef3dd4592effb2b39"
   },
   {
     "skill": "binary-debug-evidence",
     "source": "Team adaptation of android-debugging and release artifact verification",
     "group": "team",
     "entry_sha256": "96234d263be2d98d26296b2005c629a0072dbc07bc8bcc08254477358e292148",
-    "tree_sha256": "c7c2be7143cc495aaa3e38cdeb0d3faae6399c3adcb4b9b3a3c1788a24af6a4c"
+    "tree_sha256": "3b2783538027dd971fe2aa9f5a2be3c88c196331f783256232792b0daea0c80f"
   },
   {
     "skill": "qt-headless-ui-check",
