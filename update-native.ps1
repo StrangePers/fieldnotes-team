@@ -1,6 +1,6 @@
 #requires -Version 5.1
 [CmdletBinding()]
-param()
+param([switch]$Install)
 
 $ErrorActionPreference = 'Stop'
 $project = (Get-Location).Path
@@ -12,12 +12,16 @@ if (!(Test-Path -LiteralPath (Join-Path $project '.svn') -PathType Container)) {
     throw 'Run this command from the root of your SVN working copy.'
 }
 if (!(Test-Path -LiteralPath $cli -PathType Leaf) -or
-    !(Test-Path -LiteralPath (Join-Path $target '.git'))) {
+    (!$Install -and !(Test-Path -LiteralPath (Join-Path $target '.git')))) {
     throw 'Follow the native installation steps in the README first. Expected project-fieldnotes and fieldnotes-native next to the SVN working copy.'
 }
 
-git -C $PSScriptRoot pull --ff-only
-if ($LASTEXITCODE -ne 0) { throw 'Could not update fieldnotes-team.' }
+$openCode = Get-Command opencode.cmd, opencode.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
+if (!$openCode) { throw 'Install the OpenCode CLI and rerun.' }
+if (!$Install) {
+    git -C $PSScriptRoot pull --ff-only
+    if ($LASTEXITCODE -ne 0) { throw 'Could not update fieldnotes-team.' }
+}
 git -C $PSScriptRoot submodule update --init --recursive
 if ($LASTEXITCODE -ne 0) { throw 'Could not update the pinned skill library.' }
 
@@ -26,7 +30,20 @@ $expected = @($manifest.projects.native.skills)
 if ($expected.Count -ne 26 -or @($expected | Sort-Object -Unique).Count -ne 26) {
     throw 'Expected 26 distinct skill IDs in the native manifest.'
 }
-python $cli apply $PSScriptRoot native $target
+if ($Install) {
+    if (!(Test-Path -LiteralPath (Join-Path $target '.git/project-fieldnotes'))) {
+        if ((Test-Path -LiteralPath $target) -and
+            (!(Test-Path -LiteralPath $target -PathType Container) -or
+             @(Get-ChildItem -LiteralPath $target -Force | Where-Object Name -ne '.git').Count)) {
+            throw "The existing directory $target is not an empty Fieldnotes target."
+        }
+        git init -q $target
+        if ($LASTEXITCODE -ne 0) { throw "Could not initialize $target." }
+    }
+    python $cli init $target --workspace $PSScriptRoot --project native
+} else {
+    python $cli apply $PSScriptRoot native $target
+}
 if ($LASTEXITCODE -ne 0) { throw 'Fieldnotes could not apply the native profile.' }
 $plan = @(python $cli plan $PSScriptRoot native $target)
 if ($LASTEXITCODE -ne 0 -or $plan -notcontains '0 file(s) to change') {
@@ -34,10 +51,14 @@ if ($LASTEXITCODE -ne 0 -or $plan -notcontains '0 file(s) to change') {
     throw 'The native profile is not fully synchronized.'
 }
 
+if ($Install) {
+    python (Join-Path $PSScriptRoot 'scripts/connect-native.py') $project
+    if ($LASTEXITCODE -ne 0) { throw 'Could not connect the native skills in the OpenCode project config.' }
+}
 $root = (Resolve-Path -LiteralPath (Join-Path $target '.agents/skills')).Path + '\'
 $deadline = (Get-Date).AddMinutes(2)
 do {
-    $json = opencode.cmd api GET /api/skill --header "x-opencode-directory: $project"
+    $json = & $openCode.Source api GET /api/skill --header "x-opencode-directory: $project"
     if ($LASTEXITCODE -ne 0) { throw 'OpenCode skill query failed.' }
     $result = $json | ConvertFrom-Json
     $rows = @($result.data | Where-Object {
