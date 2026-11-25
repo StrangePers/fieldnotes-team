@@ -1,6 +1,6 @@
 # Fieldnotes для команды
 
-Публичный набор профилей для разработки с Codex, Claude Code и OpenCode. Выберите профиль для своего проекта. Из 35 скиллов 15 подключены из библиотеки как Git-подмодуль, ещё 20 находятся в `skills/`. Версию библиотеки фиксирует коммит этого репозитория. [Публичная библиотека Fieldnotes Skills](https://github.com/StrangePers/fieldnotes-skills)
+Публичный набор профилей для разработки с Codex, Claude Code и OpenCode. Выберите профиль для своего проекта. Из 35 скиллов 17 подключены из библиотеки как Git-подмодуль, ещё 18 находятся в `skills/`. Версию библиотеки фиксирует коммит этого репозитория. [Публичная библиотека Fieldnotes Skills](https://github.com/StrangePers/fieldnotes-skills)
 
 | Профиль | Карточек | Для каких задач |
 | --- | ---: | --- |
@@ -111,6 +111,8 @@ git diff --cached --submodule=log
 
 ## Лицензии
 
-StrangePers распространяет четыре профиля (`workspace.json` и материалы в `projects/`) и скиллы `task-brief-and-handoff` и `binary-debug-evidence` под CC BY 4.0. При распространении укажите автора и источник, дайте ссылку на лицензию и отметьте внесённые изменения. Подходящая подпись — «Fieldnotes Team Profiles by StrangePers». [Область действия и текст лицензии](LICENSE)
+StrangePers распространяет четыре профиля (`workspace.json` и материалы в `projects/`) под CC BY 4.0. При распространении укажите автора и источник, дайте ссылку на лицензию и отметьте внесённые изменения. Подходящая подпись — «Fieldnotes Team Profiles by StrangePers». [Область действия и текст лицензии](LICENSE)
+
+Скиллы `task-brief-and-handoff` и `binary-debug-evidence` сопровождаются в Fieldnotes Skills. В каталог каждого входит уведомление об авторстве StrangePers и лицензии CC BY 4.0.
 
 Для Superpowers действует MIT. У `frontend-design`, `skill-creator` и `playwright` свои файлы Apache 2.0 и сопроводительные уведомления. Для подмодуля Fieldnotes Skills действуют условия его репозитория. [Источники компонентов](sources.json)
