@@ -66,29 +66,17 @@ python project-fieldnotes/fieldnotes.py init fieldnotes-native --workspace field
 }
 ```
 
-**3. Проверьте обнаружение.** Выполните команды из **корня рабочей копии SVN**. Фильтр учитывает путь к файлу, поэтому одноимённые глобальные скиллы не попадут в результат.
+**3. Обновите и проверьте профиль одной командой.** После установки и при каждом обновлении запускайте из **корня рабочей копии SVN**:
 
 ```powershell
-$root = (Resolve-Path '../fieldnotes-native/.agents/skills').Path + '\'
-$result = opencode.cmd api GET /api/skill --header "x-opencode-directory: $((Get-Location).Path)" | ConvertFrom-Json
-$native = @($result.data | Where-Object { $_.path -and $_.path.Replace('/', '\').StartsWith($root, [StringComparison]::OrdinalIgnoreCase) })
-$native.Count
-$native | Where-Object id -eq 'cpp-dll-abi-check' | Format-List id, path
+..\fieldnotes-team\update-native.ps1
 ```
 
-Ожидайте `26` и путь, оканчивающийся на `fieldnotes-native\.agents\skills\cpp-dll-abi-check\SKILL.md`. Если при первом запуске список пуст, через несколько секунд повторите весь блок проверки. Запускайте OpenCode из корня этой рабочей копии, чтобы относительный путь указывал на тот же каталог.
+Если вы подключили профиль до появления скрипта, один раз выполните из того же каталога `git -C ../fieldnotes-team pull --ff-only`, затем запустите команду выше.
 
-**4. Обновляйте скиллы.** Из **родительского каталога** выполните:
+Признак успеха — **`OK: OpenCode sees all 26 native skills.`** Скрипт обновляет командный репозиторий и закреплённый подмодуль, применяет профиль к соседнему каталогу `fieldnotes-native` и проверяет, что план синхронизации пуст. Затем запрашивает список у OpenCode для текущей SVN-копии и сверяет все 26 имён и путей с профилем. При запуске OpenCode обнаружение может занять до двух минут. Если список неполный, скрипт укажет недостающие карточки и завершится с ошибкой.
 
-```powershell
-git -C fieldnotes-team pull --ff-only
-git -C fieldnotes-team submodule update --init --recursive
-python project-fieldnotes/fieldnotes.py sync --workspace fieldnotes-team --check
-python project-fieldnotes/fieldnotes.py sync --workspace fieldnotes-team
-python project-fieldnotes/fieldnotes.py sync --workspace fieldnotes-team --check
-```
-
-Первая проверка показывает план, последняя должна вывести `0 file(s) to change`. Для других SVN-проектов в том же родительском каталоге можно использовать уже установленный профиль: повторите шаги 2 и 3 в каждой рабочей копии.
+Для других SVN-проектов в том же родительском каталоге повторите шаги 2 и 3 в каждой рабочей копии.
 
 ## Как сопровождающему обновить библиотеку
 
