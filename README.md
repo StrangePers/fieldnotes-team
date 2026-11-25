@@ -47,36 +47,23 @@ python project-fieldnotes/fieldnotes.py sync --workspace "fieldnotes-team" --che
 
 ## OpenCode (SVN)
 
-Профиль `native` включает 26 скиллов для разработки на C++ и Qt. Рабочая копия проекта остаётся в SVN. Fieldnotes устанавливает карточки в отдельный каталог `fieldnotes-native`, а OpenCode читает их оттуда. Команды ниже предназначены для Windows PowerShell. Нужны Git, Python 3.11+ и OpenCode. Проверено с OpenCode 2.3.0 и Subversion 1.15.0.
-
-**1. Установите профиль.** Откройте PowerShell в **родительском каталоге** рабочей копии SVN. Три каталога ниже должны оказаться рядом с ней. Подмодуль скачает закреплённую версию общей библиотеки скиллов.
+**Первая установка.** Откройте Windows PowerShell в **корне рабочей копии SVN** (там, где находится `.svn`) и выполните одну строку:
 
 ```powershell
-git clone https://github.com/StrangePers/project-fieldnotes.git
-git clone --recurse-submodules https://github.com/StrangePers/fieldnotes-team.git
-git init fieldnotes-native
-python project-fieldnotes/fieldnotes.py init fieldnotes-native --workspace fieldnotes-team --project native
+& { $p = Join-Path $env:TEMP ("install-native-" + [guid]::NewGuid() + ".ps1"); try { Invoke-WebRequest -UseBasicParsing -ErrorAction Stop 'https://raw.githubusercontent.com/StrangePers/fieldnotes-team/8efe3a93a578a8f1f05fb88c5c912cf5a8b9424a/install-native.ps1' -OutFile $p; & $p } finally { Remove-Item -LiteralPath $p -ErrorAction SilentlyContinue } }
 ```
 
-**2. Подключите OpenCode.** В **корне рабочей копии SVN** создайте `opencode.jsonc` со следующим содержимым. Если там уже есть `opencode.json` или `opencode.jsonc`, добавьте в него поле `skills` или дополните существующий массив этим путём.
+Команда скачивает [установщик из закреплённого коммита](https://github.com/StrangePers/fieldnotes-team/blob/8efe3a93a578a8f1f05fb88c5c912cf5a8b9424a/install-native.ps1). Нужен доступ в интернет. Если в PATH нет Git, Python 3.11+ или OpenCode CLI, установщик запросит недостающие инструменты. Для Git, Python и при необходимости Node.js используется WinGet, для OpenCode CLI 2.3.0 — npm. Windows может запросить подтверждение установки. Поддерживаются Windows PowerShell 5.1 и PowerShell 7. [Установка OpenCode CLI](https://opencode.ai/docs/)
 
-```json
-{
-  "skills": ["../fieldnotes-native/.agents/skills"]
-}
-```
+Рядом с SVN-копией появятся три каталога: `project-fieldnotes` для инструмента, `fieldnotes-team` для командного набора и `fieldnotes-native` для установленных скиллов. В корне проекта установщик добавит путь `../fieldnotes-native/.agents/skills` в `opencode.jsonc` или существующий `opencode.json`, сохранив остальные настройки и комментарии. Для следующего SVN-проекта в той же папке запустите ту же строку из его корня: каталоги будут использованы повторно.
 
-**3. Обновите и проверьте профиль одной командой.** После установки и при каждом обновлении запускайте из **корня рабочей копии SVN**:
+**Признак успеха** — `OK: OpenCode sees all 26 native skills.` Установщик сверяет через API OpenCode каждое имя и путь для текущей SVN-копии. Обнаружение при первом запуске может занять до двух минут.
+
+**Дальнейшие обновления.** Из корня SVN-копии выполните:
 
 ```powershell
 ..\fieldnotes-team\update-native.ps1
 ```
-
-Если вы подключили профиль до появления скрипта, один раз выполните из того же каталога `git -C ../fieldnotes-team pull --ff-only`, затем запустите команду выше.
-
-Признак успеха — **`OK: OpenCode sees all 26 native skills.`** Скрипт обновляет командный репозиторий и закреплённый подмодуль, применяет профиль к соседнему каталогу `fieldnotes-native` и проверяет, что план синхронизации пуст. Затем запрашивает список у OpenCode для текущей SVN-копии и сверяет все 26 имён и путей с профилем. При запуске OpenCode обнаружение может занять до двух минут. Если список неполный, скрипт укажет недостающие карточки и завершится с ошибкой.
-
-Для других SVN-проектов в том же родительском каталоге повторите шаги 2 и 3 в каждой рабочей копии.
 
 ## Как сопровождающему обновить библиотеку
 
